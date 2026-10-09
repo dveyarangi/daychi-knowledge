@@ -1,5 +1,9 @@
 # Темы, словарь и смысловые связи · пилот
 
+> Актуальный порядок резервирования, финальной приёмки и публикации —
+> [collaboration-workflow.md](collaboration-workflow.md).
+> Перед новым заданием требуется свежая очередь, а не числа из этого снимка.
+
 [Прогресс](wiki-work-plan.md) · [Контент](wiki-production-pipeline.md)
 · [Кандидат интерфейса](https://github.com/sleontenko/daychi/blob/main/design/candidates/wiki-semantics-2026-10-05/README.md).
 
