@@ -15,8 +15,8 @@ Existing pipeline branches preserve historical work. They are not the location
 for new pipeline changes. Transfer any unfinished pipeline edits to a dedicated
 branch in daychi-knowledge; application/server changes still target Daychi.
 Private data never enters either Git repository. On the coordinator's Mac Mini,
-old pipeline data paths resolve through compatibility symlinks to the new local
-data directory, preserving absolute paths recorded in proofs and assignments.
+the new checkout links to the existing coordinator data directories. Physical
+data paths remain unchanged, preserving assignments, proofs and runtime readers.
 
 The initial knowledge snapshot includes current workspace versions as listed in
 `migration/source-manifest.json`; Daychi's unrelated uncommitted work is preserved.
@@ -28,8 +28,8 @@ pipeline tests; working editorial protocols, team register instructions, work
 plan, content status, batch journals and enrichment QA records.
 Runtime/API tests and wiki UI/design QA stay in Daychi. No content imports or
 deployments were run. Historical files retain their original factual statements.
-Local data directories: wiki-workspace, wiki-pipeline, wiki-enrichment, wiki-audit
-and nikita-archive. Runtime access databases, releases, credentials and UI captures
+The new local data directory links to existing wiki-workspace, wiki-pipeline,
+wiki-enrichment, wiki-audit and nikita-archive directories; it does not move them. Runtime access databases, releases, credentials and UI captures
 stay in the Daychi workspace. Git tracks neither set of private data.
 
 ## Existing chats
