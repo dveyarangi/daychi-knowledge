@@ -597,3 +597,24 @@ were not instrumented; do not extend the earlier 9.76-minute preparation figure
 to this follow-up. Next action: authorized browser QA/owner feedback, then canonical
 alias reconciliation and provider agreement before structured extension work.
 [Published pages and QA](wiki-updates/2026-10-09-article-pilot.md).
+
+## Owner format review · 2026-10-09
+
+The owner rejected the published reading result: plain prose without meaningful
+section/paragraph structure, contextual concept emphasis/links or expected
+article-to-article transitions. Investigation compared the original brief, private
+editorial/Markdown packet, exact imported v1 batch, tests and public live reader
+JavaScript. The packet retains 4/4/5 sections and 29 paragraphs; publication joins
+all paragraphs with spaces. The live reader renders summary inside one escaped
+paragraph. Inline mention placement was already absent in preparation; related
+semantic paths never reached production. The contract extension is unimplemented.
+
+The algorithm and contract proposal now separate source/prose preservation from
+reader-format acceptance, prohibit this export as a structured-publication
+substitute, and specify contextual mention and direct related-article checks.
+[Evidence and concrete repair handoff](wiki-updates/2026-10-09-article-format-review.md).
+No new import, revision, source editing, server/reader implementation or deployment
+was performed during this diagnosis. Do not scale to six more sources yet: restore
+and verify the intended reader result for the same three first. Historical timing
+and review records remain intact; this diagnosis's elapsed/usage/cost were not
+instrumented.

@@ -4,6 +4,8 @@ Status: proposal from the 2026-10-09 private knowledge pilot. No server/reader
 implementation, schema refresh or feature activation occurred. The three article
 texts were subsequently published through the active v1 summary contract after
 owner authorization, without truncation; this does not implement the extension.
+Owner feedback rejected that prose-only reader result. The proposed extension
+and its reader acceptance below are required to deliver the agreed article shape.
 The [active v1 contract](daychi-content-contract.md) remains unchanged and Daychi
 remains provider and executable-model authority. Knowledge only prepares drafts.
 
@@ -16,11 +18,13 @@ nor a valid semantic-v1 point_index. Truncating an article into summary or sendi
 extra fields to a strict v1 model would misrepresent the reviewed result.
 
 The trial's full claim prose happens to fit v1 at 2864/2568/2998 characters. Its
-[lossless projection](wiki-article-pilot-protocol.md#publishing-a-short-article-through-the-active-contract)
+[legacy summary export](wiki-article-pilot-protocol.md#legacy-summary-export-used-in-the-trial)
 preserves all 29 reviewed paragraphs' texts and nine existing quote points but
 omits section/paragraph layout. Full-source evidence, glossary and semantic paths
-remain private proposals. This bounded bridge must not become a truncation rule
-for future articles or a claim that v1 supports structured article bodies.
+remain private proposals. Preserving prose is not preserving an article. This
+export must not be used as a substitute for structured article publication.
+The [format review](wiki-updates/2026-10-09-article-format-review.md) also identifies
+missing inline mention placement in the private preparation format.
 
 Propose a coexisting optional article/semantic extension with its own negotiated
 version. Keep current endpoints, resource/material/concept IDs, revisions,
@@ -36,6 +40,7 @@ not the proposed wire DTO and exposes audit paths/hashes absent from reader DTOs
 |---|---|
 | Article | Stable material/resource identity; independent article revision; expected catalog title and source/content revision; introduction; ordered sections and claim IDs; reviewed draft status |
 | Claim | Stable identity, reader text and exact evidence references; no unsupported normative definition or implicit medical validation |
+| Inline mention | Exact displayed text and placement within a claim paragraph, resolved canonical concept/link identity; reviewed in context, not guessed by keyword matching |
 | Evidence | Stable source/revision identity, exact quote, bounded timestamps and source digest in owner package; reader receives allowed quote/time navigation only |
 | Concept | Stable canonical ID/type, checked aliases, contextual claims and all retained/new source links; proposals require canonical reconciliation before assignment |
 | Material→concept link | Stable identity, explains/practices/discusses, rationale, reviewed evidence; same link drives article mention, graph and backlink |
@@ -48,6 +53,29 @@ evidence limits, revision allocation and reader capability selector remain
 **unsettled**, owned by Daychi and coordinated before implementation. Do not use
 invented endpoint names as established APIs. The editorial size guide is not a
 wire byte limit.
+
+## Minimum observable reader result
+
+The agreed output needs a short introduction, ordered concrete section headings,
+separate meaningful paragraphs and restrained emphasis on concepts in context.
+Concept mentions must be clickable within those paragraphs and open the canonical
+concept page. A standalone glossary list may supplement, but cannot replace,
+those mentions. A bounded inline representation must preserve the exact paragraph
+text when combined; its precise encoding remains a provider design decision.
+
+Related materials must be direct article links with a concrete reason through
+reviewed common concepts. Preserve the target material ID and supporting link IDs;
+do not resolve an article target to the graph or invent series chronology. Keep
+graph exploration as a separate action using the same reviewed identities. The
+pilot supports one pair of related articles in both directions; its third article
+has no supported path. Missing supported paths and added unsupported paths both
+fail acceptance. Canonical concept reconciliation is still outstanding.
+
+Conformance must cover the whole published body/link DTO and real reader route:
+heading/paragraph order, contextual link location and destination, related article
+destination/reason, compact source/time links, coherent revisions, back/return,
+authorized access and legacy fallback. Exact v1 DTO equality proves only v1
+delivery. A UI styling deployment alone does not implement these capabilities.
 
 ## Common behavior and migration checks to agree
 

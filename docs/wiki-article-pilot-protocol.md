@@ -4,8 +4,11 @@ This protocol is a **private preparation experiment**, authorized on 2026-10-09.
 It does not replace the published summary process or content/semantics v1.
 The [coordinator workflow](collaboration-workflow.md) still owns reservations,
 independent review and the single final acceptor. On 2026-10-09 the owner then
-authorized publication of the three reviewed article texts. Their lossless v1
-projection is published; glossary/graph proposals remain private. Private outputs
+authorized publication of the three reviewed article texts. Their prose-only v1
+projection is published; glossary/graph proposals remain private. Owner feedback
+then rejected the reader result: section/paragraph structure and contextual links
+were missing. This projection does not fulfill structured article publication.
+See the [format review](wiki-updates/2026-10-09-article-format-review.md). Private outputs
 stay outside Git. See the [publication record](wiki-updates/2026-10-09-article-pilot.md).
 
 ## Assignment and inputs
@@ -51,7 +54,10 @@ text review; do not claim listening, gesture verification or teacher approval.
    propositions; paragraph counts must not be advertised as atomic accuracy.
 6. Propose material→concept `explains`, `practices` or `discusses` links with
    semantic rationale and evidence. Article mentions, graph edges and backlinks
-   refer to the same IDs and link objects. Similarity/search only propose candidates.
+   refer to the same IDs and link objects. Bind each intended inline mention to
+   its exact paragraph and displayed text; a detached list of concept IDs is not
+   contextual linking. Review the resulting readable link in its sentence.
+   Similarity/search only propose candidates.
 7. Select useful related-material paths through two reviewed edges to the same
    concept, with a specific explanation/comparison reason. Usually 2–4 when
    supported; zero or one is valid. Render them as derived paths, never new direct
@@ -77,6 +83,9 @@ glossary, comparison, render manifest, editor reading proof, independent review
 and reviewer reading proof. JSON keeps articles/sections/claim IDs, shared exact
 evidence, concept proposals, material-concept links and derived related paths.
 It is not `Batch` or `SemanticBatch` and must never be sent to their endpoints.
+Version 0.1 records concept mentions only as concept/link IDs: it lacks their
+placement within paragraphs. Its readable pilot renders a glossary list at the
+end. Treat this as an identified preparation gap, not inline-link acceptance.
 
 ```sh
 .venv/bin/python -m scripts.wiki_article_pilot --root "$PRIVATE_PILOT_ROOT"
@@ -92,14 +101,18 @@ prove human/agent reading. Synthetic tests deliberately reject stale sources,
 changed reviewed articles, modified readable files, missing evidence, self/partial
 review, quarantine use, duplicate concepts and unsupported paths.
 
-## Publishing a short article through the active contract
+## Legacy summary export used in the trial
 
 For this three-source trial all reviewed claim texts fit content-v1's 3000-character
 summary bound: 2864, 2568 and 2998 characters. `article_text_v1` orders introduction
 and section claim IDs, requires every claim exactly once, joins their unchanged
 texts with one space and fails on overflow. It never truncates or paraphrases.
 The current reader receives one prose body. Section headings and paragraph layout
-remain in the private structured artifact until the article extension is agreed.
+remain in the private structured artifact. This preserved claim prose but discarded
+the agreed reading structure and navigation. Do not use this path to fulfill a
+request to publish a structured article, even when its text fits the summary limit.
+The following records the performed import, not an approved article-publication
+recipe. Any separately requested legacy summary update still uses existing gates.
 
 This is a separate `summary` publication assignment, explicitly reconciled against
 live revision 1 and reserved as revision 2. Preserve title/resource/material IDs,
@@ -119,6 +132,28 @@ The 62 full-source evidence windows, concept patches and new graph links do not
 become v1 published points or semantic payloads through this projection. Longer
 articles need the negotiated extension. An identical rerun reuses the same batch
 and revision; allocate another revision only for a real content/dependency change.
+
+## Reader acceptance before structured publication
+
+Review source fidelity and the actual reader output separately. Before presenting
+a structured article as published, the final authorized reader must show the
+introduction, ordered meaningful section headings and separate claim paragraphs;
+contextual concept links must open the reconciled concept page, with the same IDs
+as graph edges/backlinks. Related-material entries must open the target article
+and explain the reviewed shared concept. A graph action is supplementary; catalog
+membership and series neighbors do not satisfy semantic related-material links.
+
+Check that evidence/time links belong to the displayed claim revision and that
+layout, emphasis, contents navigation, back/return and access behavior survive the
+complete import → DTO → reader path. Keep paired expected/runtime captures under
+Daychi's design QA rules. Check exact supported related links and absence of
+unsupported ones; do not fill a quota with weak recommendations.
+
+If the provider or reader cannot preserve this output, record `needs_changes` for
+article-format acceptance and keep that limitation visible before publication.
+Do not infer acceptance from byte preservation, importer success or tests of the
+legacy exporter. This adds no coordinator state and does not rewrite historical
+receipts or independent source reviews.
 
 ## Incremental processing
 

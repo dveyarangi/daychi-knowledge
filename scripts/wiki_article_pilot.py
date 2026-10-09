@@ -26,9 +26,11 @@ def unique(items, key):
 
 
 def article_text_v1(article):
-    """Lossless claim-text projection; headings/paragraph layout stay private.
+    """Legacy summary export preserving claim prose, not article structure.
 
     This does not allocate a revision, accept a draft or authorize an import.
+    It drops headings, paragraph boundaries, concept mentions and related paths;
+    a successful export is not acceptance of a structured article publication.
     Longer articles require the negotiated article contract, never truncation.
     """
     claims = unique(article['claims'], 'claim_id')

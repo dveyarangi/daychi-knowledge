@@ -36,7 +36,10 @@ python3.12 -m venv .venv
 и [семантическом протоколе](docs/wiki-semantic-pipeline.md).
 Для full-source статей: [обновлённый алгоритм](docs/wiki-article-pilot-protocol.md),
 [предложение расширенного контракта](docs/daychi-article-contract-proposal.md)
-и [публикация трёх пробных статей](docs/wiki-updates/2026-10-09-article-pilot.md).
+и [публикация текстов трёх пробных статей](docs/wiki-updates/2026-10-09-article-pilot.md).
+[Разбор потери структуры](docs/wiki-updates/2026-10-09-article-format-review.md):
+тексты импортированы, но согласованный формат статьи и смысловые переходы
+не реализованы; этот результат требует исправления.
 Модели ASR устанавливаются отдельно по `scripts/wiki-pipeline-requirements.txt`
 в существующее совместимое окружение Apple Silicon. Обычные тесты их не требуют.
 

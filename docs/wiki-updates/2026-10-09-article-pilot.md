@@ -1,4 +1,9 @@
-# Full-source article pilot publication · 2026-10-09
+# Full-source pilot prose publication · 2026-10-09
+
+Subsequent owner feedback: the displayed article format is **needs_changes**.
+The import below happened, but it did not deliver the agreed structured articles.
+See the [format diagnosis and repair requirements](2026-10-09-article-format-review.md).
+This assessment does not rewrite the receipt or prior source/projection reviews.
 
 Batch `wiki-article-pilot-20261009-r2`: three existing materials updated from
 revision 1 to 2, zero new materials and zero new quotes. Totals remain 476 drafts
@@ -6,7 +11,7 @@ and 1428 quote points. Owner explicitly requested publication in the current cha
 Independent review binds canonical batch digest
 `ff49d42b23440bed3558ca480129b160fe9d7ecf9e33e74c7994b4a6c5b50276`.
 
-| Published page | Article characters | Retained quote points |
+| Published page | Summary characters | Retained quote points |
 |---|---:|---:|
 | [Форма дерева подробно](https://daychee-api-production.up.railway.app/wiki#view=article&id=977ff7f66525d9f92a66ffd4fd01651b) | 2864 | 3 |
 | [Форма с двумя веерами](https://daychee-api-production.up.railway.app/wiki#view=article&id=24e00cba446f6e845aeea7c27087b7e8) | 2568 | 3 |
