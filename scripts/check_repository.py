@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PRIVATE_SUFFIXES = (
     '.sqlite', '.sqlite3', '.db', '.p8', '.p12', '.pem', '.key',
     '.mobileprovision', '.keystore', '.jks', '.ipa', '.apk', '.aab',
-    '.mp3', '.m4a', '.mp4', '.wav', '.session',
+    '.mp3', '.m4a', '.mp4', '.wav', '.session', '.pdf', '.xlsx', '.xls', '.srt', '.vtt',
 )
 PATTERNS = {
     'GitHub credential': re.compile(rb'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})\b'),
@@ -33,7 +33,7 @@ def git(*args):
 
 def private_path(name):
     path = PurePosixPath(name)
-    if any(p in {'data', 'node_modules', '.venv', '__pycache__', '.expo'} for p in path.parts):
+    if any(p in {'data', 'raw', 'outputs', 'artifacts', 'node_modules', '.venv', '__pycache__', '.expo'} for p in path.parts):
         return True
     if name.startswith(('knowledge/raw/', 'apps/practice-app/src/features/wiki/generated/',
                         'apps/practice-app/src/features/schedule/generated/')):
