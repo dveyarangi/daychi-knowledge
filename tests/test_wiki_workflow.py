@@ -112,6 +112,18 @@ def test_sync_preserves_assignment_and_blocks_changed_source(ready):
     assert w.c.execute('SELECT state FROM tasks').fetchone()[0] == 'available'
 
 
+def test_queue_reports_actual_reservations_and_missing_published_task_is_blocked(ready):
+    w, registry, _ = ready
+    identifier = packet(w)
+    claimed = w.queue('claimed')
+    assert claimed[0]['state'] == 'claimed' and claimed[0]['assignment_id'] == identifier
+    published = item(target='m:published', state='published_existing')
+    w.sync(snapshot(registry, [item(), published]), 'coordinator')
+    w.sync(snapshot(registry), 'coordinator')
+    assert not w.queue('published_existing')
+    assert w.queue('blocked')[0]['state'] == 'blocked'
+
+
 def test_scope_and_revision_are_bound_to_assignment(ready, tmp_path):
     w, _, _ = ready
     identifier = packet(w); path = tmp_path / 'batch.json'; batch = result(path)

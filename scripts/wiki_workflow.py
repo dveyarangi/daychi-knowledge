@@ -138,7 +138,7 @@ class Workflow:
             require(self.setting('acceptor') is not None, 'Initialize final acceptor first')
             present = {t['id'] for t in items}
             for old in self.c.execute('SELECT * FROM tasks').fetchall():
-                if old['id'] not in present and old['state'] not in ('verified', 'published_existing'):
+                if old['id'] not in present and old['state'] != 'verified':
                     self.c.execute("UPDATE tasks SET state='blocked' WHERE id=?", (old['id'],))
             for item in items:
                 payload = json.dumps(item, sort_keys=True)
@@ -340,9 +340,16 @@ class Workflow:
             freshness = 'fresh'
         except ValueError as error:
             freshness = str(error)
+        snap = json.loads(self.setting('snapshot') or '{}')
         return {'protocol_version': 1, 'acceptor': self.setting('acceptor'), 'freshness': freshness,
+                'snapshot_checked_at': snap.get('checked_at'), 'source_snapshot_counts': snap.get('counts'),
                 'states': dict(self.c.execute('SELECT state,count(*) FROM tasks GROUP BY state').fetchall()),
                 'assignment_states': dict(self.c.execute('SELECT state,count(*) FROM assignments GROUP BY state').fetchall())}
+
+    def queue(self, state):
+        self.fresh()
+        return [{**json.loads(r['payload']), 'state': r['state'], 'assignment_id': r['assignment']}
+                for r in self.c.execute('SELECT * FROM tasks WHERE state=? ORDER BY id', (state,))]
 
 
 def main():
@@ -367,8 +374,7 @@ def main():
         elif args.command == 'sync': workflow.sync(read(args.snapshot), args.actor)
         elif args.command == 'status': print(json.dumps(workflow.status(), ensure_ascii=False))
         elif args.command == 'queue':
-            workflow.fresh()
-            print(json.dumps([json.loads(r[0]) for r in workflow.c.execute('SELECT payload FROM tasks WHERE state=? AND assignment IS NULL', (args.state,))], ensure_ascii=False))
+            print(json.dumps(workflow.queue(args.state), ensure_ascii=False))
         elif args.command == 'claim': write_private(args.output, workflow.claim(args.task, args.editor, args.reviewer, args.batch_id, args.actor))
         elif args.command == 'submit': print(workflow.submit(args.assignment, args.file, args.actor))
         elif args.command == 'review': workflow.review(args.assignment, read(args.file), args.actor)
