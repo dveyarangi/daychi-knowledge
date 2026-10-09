@@ -1,5 +1,9 @@
 # Обработка контента
 
+> Актуальный порядок резервирования, финальной приёмки и публикации —
+> [collaboration-workflow.md](collaboration-workflow.md).
+> Перед новым заданием требуется свежая очередь, а не числа из этого снимка.
+
 [Прогресс](wiki-work-plan.md) · [Протокол участника](wiki-contributor-pipeline.md)
 · [Общий реестр](wiki-team-pipeline.md) · [Пополнения на GitHub](wiki-status.md).
 
