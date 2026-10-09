@@ -81,3 +81,12 @@ Drive/Zoom/Facebook и документы требуют адаптера ста
 из полных проверенных текстов, независимое review каждого утверждения и связи,
 точные опубликованные цитаты с таймкодами. Пилот 10 страниц/16 связей проверен
 локально; production ещё не изменён. Словарь не увеличивает число конспектов.
+
+## Full-source article experiment · 2026-10-09
+
+The separate [editorial pilot](wiki-article-pilot-protocol.md) prepares private
+articles, concept patches and full-source evidence jointly. It does not replace
+this active protocol or authorize imports by itself. Three reviewed short article
+texts were subsequently [published as lossless v1 projections](wiki-updates/2026-10-09-article-pilot.md)
+after separate owner authorization. Structured bodies/full-source evidence still
+require the [compatible extension proposal](daychi-article-contract-proposal.md).

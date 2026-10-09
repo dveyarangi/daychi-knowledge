@@ -543,3 +543,57 @@ content-v1 и semantics-v1 совпали с текущими executable models 
 Новый production-импорт и deploy не выполнялись. Usage с численным остатком
 в этой сессии недоступен; доступный остаток не оценивался по числу токенов чата.
 Объём следующей редакционной партии остаётся по плану выше.
+
+## Full-source article pilot · 2026-10-09
+
+Prepared three private readable articles (327–396 words) jointly with glossary
+patches and source-grounded graph links. Independent final-hash review: pass;
+29/29 claim paragraphs and 6/6 link rationales checked against complete sources,
+62 exact evidence windows. These are paragraph/rationale coverage counts, not
+measured ASR accuracy or atomic-claim precision. Four existing concept supplements
+and one proposed contextual candidate; no new canonical concepts accepted or
+aliases added. Two directed related paths represent one useful pair; the third
+article has none. Existing summaries and corpus counts remain unchanged.
+
+Measured wall time from coordinator reservation through preparation, concurrent
+review, checks and protocol/contract draft: 9.76 minutes, checkpoint 21:16:13 MSK.
+Startup/repo inspection and final report bookkeeping excluded. Separate reviewer
+elapsed, token usage and monetary cost unavailable. No ASR run, listening, teacher
+approval, owner acceptance, production import, flags, deployment or release.
+Existing coordinator state: review_pass; owner acceptance pending.
+
+Verification: 103 synthetic tests passed (15 new); final private packet
+--require-review validation passed; repository guard passed for 117 tracked files,
+plus a privacy scan passed for four new deliverables. Optional pytest cache write
+was denied by the workspace sandbox; test outcomes were unaffected.
+
+[Refined algorithm](wiki-article-pilot-protocol.md) ·
+[Compatible extension proposal](daychi-article-contract-proposal.md).
+Private outputs: knowledge data/wiki-article-pilot/2026-10-09/START-HERE.md.
+Current aliases, new ID reservation and full merged-page review remain later
+publication gates. Proposed next trial: six already checked sources, with repeated
+and conflicting senses plus no-op/source-change exercises; not yet assigned.
+
+## Publication follow-up · 2026-10-09
+
+The owner subsequently authorized publication of the three reviewed article texts.
+Batch `wiki-article-pilot-20261009-r2` updates three existing cards to revision 2,
+preserving all 29 claim texts and nine old quote points. No new corpus materials
+or quotes: totals remain 476 / 1428. Independent projection review passed against
+the final canonical batch hash and hash-identical complete-source reading proof.
+Actual article lengths: 2864 / 2568 / 2998 characters, inside the active v1 bound.
+
+Receipt and replay confirmed; exact authorized DTO, unchanged original catalog
+fields, anonymous redaction and private 401 checked; all three lead recent updates.
+Required browser visual QA remains open: after explicit permission to use the
+stored Daychi QA code, the wiki reported its invitation revoked. Assignment is
+`imported`, not `verified`. Glossary patches/graph/evidence extension remain private
+proposals. No deploy, feature activation, listening or teacher approval.
+
+Verification of the updated exporter/protocol: 108 synthetic tests passed,
+including five projection cases that reject omitted/repeated claims, empty text
+and overflow without truncation. Full publication elapsed, token usage and cost
+were not instrumented; do not extend the earlier 9.76-minute preparation figure
+to this follow-up. Next action: authorized browser QA/owner feedback, then canonical
+alias reconciliation and provider agreement before structured extension work.
+[Published pages and QA](wiki-updates/2026-10-09-article-pilot.md).
