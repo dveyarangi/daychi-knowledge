@@ -1,0 +1,274 @@
+{
+  "$defs": {
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1000,
+          "minLength": 20,
+          "title": "Text",
+          "type": "string"
+        },
+        "evidence_indexes": {
+          "items": {
+            "type": "integer"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Evidence Indexes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "text",
+        "evidence_indexes"
+      ],
+      "title": "Claim",
+      "type": "object"
+    },
+    "Quote": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 1500,
+          "minLength": 10,
+          "title": "Text",
+          "type": "string"
+        },
+        "start_seconds": {
+          "maximum": 100000,
+          "minimum": 0,
+          "title": "Start Seconds",
+          "type": "number"
+        },
+        "end_seconds": {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "title": "End Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "text",
+        "start_seconds",
+        "end_seconds"
+      ],
+      "title": "Quote",
+      "type": "object"
+    },
+    "Review": {
+      "additionalProperties": false,
+      "properties": {
+        "editor": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Editor",
+          "type": "string"
+        },
+        "reviewer": {
+          "maxLength": 80,
+          "minLength": 1,
+          "title": "Reviewer",
+          "type": "string"
+        },
+        "editorial_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Editorial Sha256",
+          "type": "string"
+        },
+        "review_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Review Sha256",
+          "type": "string"
+        },
+        "verdict": {
+          "const": "pass",
+          "title": "Verdict",
+          "type": "string"
+        },
+        "full_text_read": {
+          "const": true,
+          "title": "Full Text Read",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "editor",
+        "reviewer",
+        "editorial_sha256",
+        "review_sha256",
+        "verdict",
+        "full_text_read"
+      ],
+      "title": "Review",
+      "type": "object"
+    },
+    "SemanticLink": {
+      "additionalProperties": false,
+      "properties": {
+        "resource_id": {
+          "pattern": "^[A-Za-z0-9_-]{11}$",
+          "title": "Resource Id",
+          "type": "string"
+        },
+        "expected_title": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Expected Title",
+          "type": "string"
+        },
+        "source_revision": {
+          "maximum": 100000,
+          "minimum": 1,
+          "title": "Source Revision",
+          "type": "integer"
+        },
+        "transcript_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Transcript Sha256",
+          "type": "string"
+        },
+        "subtitles_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Subtitles Sha256",
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "discusses",
+            "explains",
+            "practices"
+          ],
+          "title": "Relation",
+          "type": "string"
+        },
+        "rationale": {
+          "maxLength": 1000,
+          "minLength": 20,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Quote"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Points",
+          "type": "array"
+        }
+      },
+      "required": [
+        "resource_id",
+        "expected_title",
+        "source_revision",
+        "transcript_sha256",
+        "subtitles_sha256",
+        "relation",
+        "rationale",
+        "points"
+      ],
+      "title": "SemanticLink",
+      "type": "object"
+    },
+    "SemanticPage": {
+      "additionalProperties": false,
+      "properties": {
+        "concept_id": {
+          "pattern": "^[a-z][a-z0-9-]{1,79}$",
+          "title": "Concept Id",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "term",
+            "topic"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 200,
+          "minLength": 2,
+          "title": "Title",
+          "type": "string"
+        },
+        "aliases": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Aliases",
+          "type": "array"
+        },
+        "revision": {
+          "maximum": 100000,
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "status": {
+          "const": "source_checked_draft",
+          "default": "source_checked_draft",
+          "title": "Status",
+          "type": "string"
+        },
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/Claim"
+          },
+          "maxItems": 4,
+          "minItems": 1,
+          "title": "Claims",
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/SemanticLink"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Links",
+          "type": "array"
+        }
+      },
+      "required": [
+        "concept_id",
+        "kind",
+        "title",
+        "revision",
+        "claims",
+        "links"
+      ],
+      "title": "SemanticPage",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "batch_id": {
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$",
+      "title": "Batch Id",
+      "type": "string"
+    },
+    "pages": {
+      "items": {
+        "$ref": "#/$defs/SemanticPage"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Pages",
+      "type": "array"
+    },
+    "review": {
+      "$ref": "#/$defs/Review"
+    }
+  },
+  "required": [
+    "batch_id",
+    "pages",
+    "review"
+  ],
+  "title": "SemanticBatch",
+  "type": "object"
+}

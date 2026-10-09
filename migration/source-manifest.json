@@ -1,0 +1,447 @@
+{
+  "migration_date": "2026-10-09",
+  "source_repository": "https://github.com/sleontenko/daychi",
+  "source_workspace_head": "5f9ba442e04cd5dfa70527b9e670b491c491888c",
+  "product_base": "e1ab559c8d5db3dbd7db95aa7400941381ada12a",
+  "private_data": "Untracked local directories; never included in this Git manifest.",
+  "files": [
+    {
+      "path": "scripts/wiki_asr_batch.py",
+      "source_sha256": "35c0ba69352beafe0ad70c0359b4e4f324152a00394aaa7a938cffc77f9502bb",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_diagnostics.py",
+      "source_sha256": "5febdbfd47096b85edd08fbf55a01eeac89fb4618db7298a4b18f0b51160aa19",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_disagreements.py",
+      "source_sha256": "6f35b58e416be04c70ed4cfc9e48ab5e5a9187c7e4d8d9578632f03e373ea9f2",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_enrichment_batch.py",
+      "source_sha256": "e4241cb68e1c95943fd69ad3ea98fd4847d257b390ff7b4f578495efdc357a6a",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_export.py",
+      "source_sha256": "dd4506919683ebec63c058d98a1bc35fd52e397ddabb7c8ea7d5213abe1718de",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_gate.py",
+      "source_sha256": "15fc82e3f48df34d751ac2c2b462a43936b65bf4d349fc28891dd40acad6681c",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_pilot.py",
+      "source_sha256": "37dd0e72dfc3a3330391ff7354db96ca760ec1187a024c5b47185b0603aeba6b",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_queue.py",
+      "source_sha256": "631a1a4fc39a73952d4b561c2d95040d8e25682a086e26a22c4d81f5be1b618d",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_report.py",
+      "source_sha256": "aecaff9e08f3cd554df0d57a91341f0e4ecc3e5bc8dbf5f74f2eba58a96a883d",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_asr_score.py",
+      "source_sha256": "97c2732f6be74ee053febf2ad5bb7561ae885e3b6a63c952c17351e337980f83",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_corpus_index.py",
+      "source_sha256": "d535722c41f6a731d7a88b7d5172aad1ddea4e2163ef51f2e41ebdb4d57d87b1",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_enrichment_batch.py",
+      "source_sha256": "e43299048d2296558539b571833507a04e346485c59cc98cf28678c6a516dbe6",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_enrichment_import.py",
+      "source_sha256": "d702165b78d6196ea296f8f5796ee854877a43a2562c67dfad0a5ff0cc91e872",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_fleurs_benchmark.py",
+      "source_sha256": "7a6de10474480913c85b28ff0531af9d35a3378c50bc3b04eacf73db46b811be",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_gpt_reference.py",
+      "source_sha256": "cd5ab5415bcae44dfde5a930609c028e0982db5ca27c2ec5165e9c5381dfbd41",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_qwen_asr.py",
+      "source_sha256": "5824d070b33f3b0c4cad1d402fe0bfba9e03ca98bf7889bb14433c5064551cf9",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_real_batch.py",
+      "source_sha256": "1990773e933fe7215a9cfe293d97fbd78987cf207f506e62dc2d027d7f64286a",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki_semantic_batch.py",
+      "source_sha256": "b2e64ce934ee8f0ab41812a5f19dfaa5382fc021ec69393b9d8f1c865bcf5941",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "scripts/wiki_semantic_import.py",
+      "source_sha256": "6ecd702d63aefeb5e17d9fe943e922101c62a6f07941c8d1fb453e46fc10d639",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "scripts/import_lessons_archive.py",
+      "source_sha256": "bacd352dede462f41696ca6649425c9599b8ff2a0d257c4a653f1fa41920231b",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "scripts/wiki-pipeline-requirements.txt",
+      "source_sha256": "88ea737104bcf8a9e3c1e36faca5e9af9dd5424fcf93fff9a5e5e11b4ba9f14c",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_diagnostics.py",
+      "source_sha256": "fa849cd3370d7f5e0b11e48ffbe76cf566d90b636295661c5f2a72f8e7965c20",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_enrichment_batch.py",
+      "source_sha256": "6edcfc72a7ec5cc742de53b01ead02a871412573eaeebe72f81fa1f03f55a03d",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_export.py",
+      "source_sha256": "dfe390e8039a1a8ca1cbe6755ff6b5282e20cbd6868f7b0fcb6d02cb37dca749",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_gate.py",
+      "source_sha256": "a5887f01dfe5998875482ce68edcff4734b0ce269fa68f539e466c9075d71f91",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_queue.py",
+      "source_sha256": "4ab3892bbfa1e4b1619bba6c5ba3d6cd8cfbfaf1c01232a37bc2fb4d78e7a3ab",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_asr_score.py",
+      "source_sha256": "dbcc44121356fdc6f00a5129cf90cef9a6a3daee444a94a37ec29834b938bd0d",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_corpus_index.py",
+      "source_sha256": "e9509a665f6a7aa516c2a732ba2ef115f42b25ef5860b1f1b2bca27cf493804a",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_enrichment_batch.py",
+      "source_sha256": "0ea93321e0a976ccd9fceba404c36565c18d91f69263c99d8f0d39e6f43d934d",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_real_batch.py",
+      "source_sha256": "0b271b94b06744c20f64baaccac6f407903627fc091057cb013fdb19b2983a1f",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "tests/test_wiki_semantic_batch.py",
+      "source_sha256": "2da81a4ea3b3b5e676d7c057e274fffca0aee329c837405ceec29e3b39f49eff",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-production-pipeline.md",
+      "source_sha256": "396ba3961e0250924d340200e93911e3f84180623caae0b5eecae148eae8d394",
+      "source_tracked": true,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-contributor-pipeline.md",
+      "source_sha256": "5c75b19a2880f2de53f3bc13665cc01d89df3868554aa52d975db91196c51752",
+      "source_tracked": true,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-team-pipeline.md",
+      "source_sha256": "1c893c39c15046811d245309f8845eea2d2448e2d0481800aebd9e1ddfaddf98",
+      "source_tracked": true,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-work-plan.md",
+      "source_sha256": "2f7c7c3ed7ee8c391d9e73cdb31745d2ee5550c918ab25b8458a541aea1273b1",
+      "source_tracked": true,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-semantic-pipeline.md",
+      "source_sha256": "5099fc27480056d6f172cb81c093cd511525aa30fc0b540c9d8d7c366fba8e1d",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-status.md",
+      "source_sha256": "d0440942d788290c7653c5f2fd2f06dc523a44d88489604c6706fe716c57e579",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-04.md",
+      "source_sha256": "12e316a2eb895444634ca8a93d066f78d588c7e3bb6ff6f8b8c6a08be751e401",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-05.md",
+      "source_sha256": "47337288af8cdc4811827abb3147b1dcc40ee5d65296394021bc3fd5542b6680",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-06.md",
+      "source_sha256": "14255340f244712b4967e9836e4886f108f039f3e361714be1a4ca714eca8731",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-07.md",
+      "source_sha256": "58e904ba2b00a65a66ebc5cae1ca6cdb4797c12de38129609744c68710ae59a2",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-08.md",
+      "source_sha256": "e1cdf6ae303bd4edeba5bcfdb0ffb9bc92752a329093e2aa73ad5158bb47d0b5",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-05-09.md",
+      "source_sha256": "7cb16b2f849b39787bb3379d3ac761b712afb6bfeda50c11ed237026ee4eb7cb",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-10.md",
+      "source_sha256": "a71948e8b6da64ce0485bc12258474f091ea5caf29af9ff6b356a94f5d095a18",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-11.md",
+      "source_sha256": "73f02ea80ef10f280d58d4aa7af4c4836b50260633596e104cb9cbd7c8bf6c31",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-12.md",
+      "source_sha256": "1e66613db460c2291738a12c0cb7adf44555873216a78846a1db66fa0cd43c3a",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-13.md",
+      "source_sha256": "4d35bb923ca982e4047823f39b2b497dfe4666d43edc407dd3c6dfeda722c514",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-14.md",
+      "source_sha256": "00ef25c2e3e0b89484c0f900731c680302cc8c33dc1af13113e26033307c1385",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-15.md",
+      "source_sha256": "8b6ba05d76e5060432ad758e2a3fb171fd524412b78cc08cf3e4ff7f0010d271",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-16.md",
+      "source_sha256": "37c2734f8ff9629344dfc0576dbde22213501b15cab72869222b4b21e140c740",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-17.md",
+      "source_sha256": "0362be75251f5d313d2e6ee120b44e0714120ed503e7534f3400f035670ed914",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-18.md",
+      "source_sha256": "c407b5e60a2ac44b813bce4085734e4b4eb518616b9054ef5cb2419400d8b657",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/wiki-updates/2026-10-06-19.md",
+      "source_sha256": "6a2d057afee544f06ced301e0cffc279624fa1ae6aad8b69cc7aab3841e57fb1",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-09-30/README.md",
+      "source_sha256": "ec70243623b8ef433c16e94f4c2176299de27f3857bec3694695ec421dc59a5c",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-01/README.md",
+      "source_sha256": "29c17f315ef057549973885e203d5c292be00ba87feb55e1ec7de685558ce9eb",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-02/README.md",
+      "source_sha256": "cd1c6e0e53ee6beb55fa0dbb2deacbc1a1388bea0d8db2d25320faef1169a916",
+      "source_tracked": true,
+      "includes_workspace_changes": false
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05-batch-05/README.md",
+      "source_sha256": "dbb705fd192b0995d4c6c959bc40b29d812f80febec6f397710637d2925f2a2c",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05-batch-06/README.md",
+      "source_sha256": "db65ebe639526417dd997a8727613bc7dcc2b0a10cb902a85a03dcbb56c0a779",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05-batch-07/README.md",
+      "source_sha256": "8d119bb9fad8851bcae9db31f0b755697729dfa7d156c821071b36e97f3d8526",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05-batch-08/README.md",
+      "source_sha256": "dfb6781a20009c28db5c4f112df2969ef1c11f9dea9e80029179bf9d39b1ec76",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05-batch-09/README.md",
+      "source_sha256": "eca0bd2489a58f5816f465224e8d452f3a6cc4b6844eb5658a442ef052ee5f49",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-05/README.md",
+      "source_sha256": "2c053e7902ee7a6667ffbc41d3fc806ee9fda989d72756a1296376d2ccd49dd2",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-10/README.md",
+      "source_sha256": "6b71f57af97bb92a726a63f5348b11c43863435e6d213d6c19ad4f729544b9c8",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-11/README.md",
+      "source_sha256": "f35f63cbee3fb23b4aa5353ba4ff279121e1be0b90ac13ed4e2c3cdc3ae4fea2",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-12/README.md",
+      "source_sha256": "b66fea2a2f76716c0ab749d085146092c775a7125dc51d6d2a991c0dc192cc4c",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-13/README.md",
+      "source_sha256": "f1b7c375a4ba1d2fcd66986c9a727b6083aeb9c3196a6c494fefbdf506c3f25b",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-14/README.md",
+      "source_sha256": "7793530a3f77ce9d4f734d6687a7bf340304a6f25327e39c040c504dc2374bb9",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-15/README.md",
+      "source_sha256": "0e80782b820a1825e3f554faed654238a0290b1d33cdabd19645fc591551e5dd",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-16/README.md",
+      "source_sha256": "123711892f0242c9a6ba7a3d7d9a2e4ebd8021788328648d180cadad6a04d91a",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-17/README.md",
+      "source_sha256": "453f7ff4ba33c42515f5d2ae565acbbbe73e3e78b02ddd1dad2d9ce2bf524e50",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-18/README.md",
+      "source_sha256": "3100bde7c1eb2cf7a9ec0ac912d2b59779f03c2819f1b60035d5f60c9a293241",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-batch-19/README.md",
+      "source_sha256": "8460281a40914126a7060f8a6c8314a602f6f4c9fb3a897651ed774050b03f87",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    },
+    {
+      "path": "docs/qa-wiki-enrichment-2026-10-06-run300/README.md",
+      "source_sha256": "c6d244b2213c70fc5e426fc743d613c1d8413eee6fc0ebcfa82c4413b03af039",
+      "source_tracked": false,
+      "includes_workspace_changes": true
+    }
+  ]
+}

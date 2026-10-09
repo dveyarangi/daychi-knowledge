@@ -1,0 +1,29 @@
+{
+  "content": {
+    "source_path": "practice_api/wiki_content.py",
+    "source_sha256": "e7c3205c7e569b2bc25cb64617cf8b35d14f02e0477cd91f0583aa6652dc9e15",
+    "names": [
+      "Batch",
+      "Enrichment",
+      "Point",
+      "youtube_id"
+    ],
+    "protocol": "content-v1"
+  },
+  "semantics": {
+    "source_path": "practice_api/wiki_semantics.py",
+    "source_sha256": "dd6c0f77a2ff66c47691f9d6c3cd3ba25a83ad76190b357ae4184f05604799f5",
+    "names": [
+      "Claim",
+      "Quote",
+      "Review",
+      "SemanticBatch",
+      "SemanticLink",
+      "SemanticPage",
+      "StrictModel",
+      "canonical",
+      "folded"
+    ],
+    "protocol": "semantics-v1"
+  }
+}

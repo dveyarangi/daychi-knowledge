@@ -1,0 +1,118 @@
+{
+  "$defs": {
+    "Enrichment": {
+      "properties": {
+        "resource_id": {
+          "pattern": "^[A-Za-z0-9_-]{11}$",
+          "title": "Resource Id",
+          "type": "string"
+        },
+        "expected_title": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Expected Title",
+          "type": "string"
+        },
+        "revision": {
+          "maximum": 100000,
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "summary": {
+          "maxLength": 3000,
+          "minLength": 30,
+          "title": "Summary",
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "$ref": "#/$defs/Point"
+          },
+          "maxItems": 8,
+          "minItems": 2,
+          "title": "Points",
+          "type": "array"
+        },
+        "transcript_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Transcript Sha256",
+          "type": "string"
+        },
+        "subtitles_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Subtitles Sha256",
+          "type": "string"
+        },
+        "status": {
+          "default": "source_checked_draft",
+          "pattern": "^source_checked_draft$",
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "resource_id",
+        "expected_title",
+        "revision",
+        "summary",
+        "points",
+        "transcript_sha256",
+        "subtitles_sha256"
+      ],
+      "title": "Enrichment",
+      "type": "object"
+    },
+    "Point": {
+      "properties": {
+        "text": {
+          "maxLength": 1500,
+          "minLength": 10,
+          "title": "Text",
+          "type": "string"
+        },
+        "start_seconds": {
+          "maximum": 100000,
+          "minimum": 0,
+          "title": "Start Seconds",
+          "type": "number"
+        },
+        "end_seconds": {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "title": "End Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "text",
+        "start_seconds",
+        "end_seconds"
+      ],
+      "title": "Point",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "batch_id": {
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$",
+      "title": "Batch Id",
+      "type": "string"
+    },
+    "records": {
+      "items": {
+        "$ref": "#/$defs/Enrichment"
+      },
+      "maxItems": 100,
+      "minItems": 1,
+      "title": "Records",
+      "type": "array"
+    }
+  },
+  "required": [
+    "batch_id",
+    "records"
+  ],
+  "title": "Batch",
+  "type": "object"
+}

@@ -1,0 +1,16 @@
+name: Checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r scripts/dev-requirements.txt
+      - run: python scripts/check_repository.py
+      - run: python -m pytest -q
+      - run: python -m compileall -q scripts daychi_contracts
