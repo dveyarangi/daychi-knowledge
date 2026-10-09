@@ -35,3 +35,18 @@ contract and reports the absent pilot. Use `--require-semantics` when reviewing 
 
 Synthetic regression tests cover source binding, quarantine, exact evidence,
 independent review, protected proofs and unchanged package generation.
+
+## Full-source article experiment · 2026-10-09
+
+The separate [editorial pilot](wiki-article-pilot-protocol.md) prepares private
+articles, concept patches and full-source evidence jointly. It does not replace
+this active protocol or authorize imports by itself. See the
+[compatible extension proposal](daychi-article-contract-proposal.md); its structured
+article/evidence format is not supported by content/semantics v1. After separate
+owner authorization, three short article texts were published as prose-only v1
+summary projections at revision 2. Existing points and identities were preserved.
+The [publication record](wiki-updates/2026-10-09-article-pilot.md) distinguishes this
+active-contract update from the proposed extension.
+The owner subsequently rejected the article format; see the
+[diagnosis and acceptance requirements](wiki-updates/2026-10-09-article-format-review.md).
+Legacy summary export is not a structured article publication path.

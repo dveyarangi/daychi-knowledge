@@ -146,3 +146,13 @@ hashes/цитата, **вся страница** скрывается вмест
 Совместимость: новые узлы графа выдаются только при `?semantics=1` и включённом
 feature flag. Старые клиенты, включая существующий native binary, получают
 прежний граф. Новый веб-клиент запрашивает слой явно; native host пока этого не делает.
+
+## Full-source article experiment · 2026-10-09
+
+The separate [editorial pilot](wiki-article-pilot-protocol.md) prepares private
+articles, concept patches and full-source evidence jointly. It does not replace
+this active protocol or authorize imports by itself. See the
+[compatible extension proposal](daychi-article-contract-proposal.md); its
+article/evidence format is not supported by semantic v1. The three article texts
+were published through content v1; new concept pages, links and derived paths
+remain private proposals requiring canonical reconciliation and merged-page review.
