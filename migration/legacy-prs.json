@@ -9,37 +9,43 @@
           "source_path": "docs/qa-wiki-enrichment-2026-10-05-batch-09/README.md",
           "source_sha256": "eca0bd2489a58f5816f465224e8d452f3a6cc4b6844eb5658a442ef052ee5f49",
           "destination": "docs/qa-wiki-enrichment-2026-10-05-batch-09/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-production-pipeline.md",
           "source_sha256": "ea3ebc2a0796ceaaab7e28c1f090e3ba8bc66ddfbc81fff00d5b3765cff88cf3",
           "destination": "migration/legacy-prs/pr-4/docs/wiki-production-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-status.md",
           "source_sha256": "abdf0e624a95eadc4cd06dc3432032b4b95fb3250cdcfaefed65c2bb881e3f6b",
           "destination": "migration/legacy-prs/pr-4/docs/wiki-status.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-team-pipeline.md",
           "source_sha256": "488e6cffa8a8480e3feef6ff71fe02327903cc7a86fa09804faba4a6bff80d53",
           "destination": "migration/legacy-prs/pr-4/docs/wiki-team-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-05-09.md",
           "source_sha256": "7cb16b2f849b39787bb3379d3ac761b712afb6bfeda50c11ed237026ee4eb7cb",
           "destination": "docs/wiki-updates/2026-10-05-09.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-work-plan.md",
           "source_sha256": "38e02a57cf7cd6e02898adbca6d3c6f0a157d4d2e85d7aa0c3b49cd0aab064fe",
           "destination": "migration/legacy-prs/pr-4/docs/wiki-work-plan.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         }
       ],
       "product_disposition": "merge_history_with_forwarding_notice",
@@ -60,43 +66,50 @@
           "source_path": "docs/wiki-contributor-pipeline.md",
           "source_sha256": "5c75b19a2880f2de53f3bc13665cc01d89df3868554aa52d975db91196c51752",
           "destination": "docs/wiki-contributor-pipeline.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-production-pipeline.md",
           "source_sha256": "152f5f502afccba3d80c1eba12106e107d322f5f4e5d38db236f5912be6348c8",
           "destination": "migration/legacy-prs/pr-5/docs/wiki-production-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-semantic-pipeline.md",
           "source_sha256": "5099fc27480056d6f172cb81c093cd511525aa30fc0b540c9d8d7c366fba8e1d",
           "destination": "migration/legacy-prs/pr-5/docs/wiki-semantic-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-work-plan.md",
           "source_sha256": "8e8012de632203fa8cfe39d9d853a7f26aea9155467c04f9efe390538e5c053d",
           "destination": "migration/legacy-prs/pr-5/docs/wiki-work-plan.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "scripts/wiki_semantic_batch.py",
           "source_sha256": "b2e64ce934ee8f0ab41812a5f19dfaa5382fc021ec69393b9d8f1c865bcf5941",
           "destination": "migration/legacy-prs/pr-5/scripts/wiki_semantic_batch.py",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "scripts/wiki_semantic_import.py",
           "source_sha256": "6ecd702d63aefeb5e17d9fe943e922101c62a6f07941c8d1fb453e46fc10d639",
           "destination": "migration/legacy-prs/pr-5/scripts/wiki_semantic_import.py",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "tests/test_wiki_semantic_batch.py",
           "source_sha256": "2da81a4ea3b3b5e676d7c057e274fffca0aee329c837405ceec29e3b39f49eff",
           "destination": "tests/test_wiki_semantic_batch.py",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         }
       ],
       "product_disposition": "retain_runtime_and_ui_only",
@@ -117,151 +130,176 @@
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-10/README.md",
           "source_sha256": "6b71f57af97bb92a726a63f5348b11c43863435e6d213d6c19ad4f729544b9c8",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-10/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-11/README.md",
           "source_sha256": "f35f63cbee3fb23b4aa5353ba4ff279121e1be0b90ac13ed4e2c3cdc3ae4fea2",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-11/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-12/README.md",
           "source_sha256": "b66fea2a2f76716c0ab749d085146092c775a7125dc51d6d2a991c0dc192cc4c",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-12/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-13/README.md",
           "source_sha256": "f1b7c375a4ba1d2fcd66986c9a727b6083aeb9c3196a6c494fefbdf506c3f25b",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-13/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-14/README.md",
           "source_sha256": "7793530a3f77ce9d4f734d6687a7bf340304a6f25327e39c040c504dc2374bb9",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-14/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-15/README.md",
           "source_sha256": "0e80782b820a1825e3f554faed654238a0290b1d33cdabd19645fc591551e5dd",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-15/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-16/README.md",
           "source_sha256": "123711892f0242c9a6ba7a3d7d9a2e4ebd8021788328648d180cadad6a04d91a",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-16/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-17/README.md",
           "source_sha256": "453f7ff4ba33c42515f5d2ae565acbbbe73e3e78b02ddd1dad2d9ce2bf524e50",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-17/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-18/README.md",
           "source_sha256": "3100bde7c1eb2cf7a9ec0ac912d2b59779f03c2819f1b60035d5f60c9a293241",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-18/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-batch-19/README.md",
           "source_sha256": "8460281a40914126a7060f8a6c8314a602f6f4c9fb3a897651ed774050b03f87",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-batch-19/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/qa-wiki-enrichment-2026-10-06-run300/README.md",
           "source_sha256": "c6d244b2213c70fc5e426fc743d613c1d8413eee6fc0ebcfa82c4413b03af039",
           "destination": "docs/qa-wiki-enrichment-2026-10-06-run300/README.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-production-pipeline.md",
           "source_sha256": "3ed0648980d8641bfefc49ed4de74cb3f29aa1b1b5e1854326d580713f3d395a",
           "destination": "migration/legacy-prs/pr-6/docs/wiki-production-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-status.md",
           "source_sha256": "d0440942d788290c7653c5f2fd2f06dc523a44d88489604c6706fe716c57e579",
           "destination": "docs/wiki-status.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-team-pipeline.md",
           "source_sha256": "1b0cf89a2ff602789dc6590205878a4318949fb571b13b5de67b80b145b7b77f",
           "destination": "migration/legacy-prs/pr-6/docs/wiki-team-pipeline.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-10.md",
           "source_sha256": "a71948e8b6da64ce0485bc12258474f091ea5caf29af9ff6b356a94f5d095a18",
           "destination": "docs/wiki-updates/2026-10-06-10.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-11.md",
           "source_sha256": "73f02ea80ef10f280d58d4aa7af4c4836b50260633596e104cb9cbd7c8bf6c31",
           "destination": "docs/wiki-updates/2026-10-06-11.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-12.md",
           "source_sha256": "1e66613db460c2291738a12c0cb7adf44555873216a78846a1db66fa0cd43c3a",
           "destination": "docs/wiki-updates/2026-10-06-12.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-13.md",
           "source_sha256": "4d35bb923ca982e4047823f39b2b497dfe4666d43edc407dd3c6dfeda722c514",
           "destination": "docs/wiki-updates/2026-10-06-13.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-14.md",
           "source_sha256": "00ef25c2e3e0b89484c0f900731c680302cc8c33dc1af13113e26033307c1385",
           "destination": "docs/wiki-updates/2026-10-06-14.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-15.md",
           "source_sha256": "8b6ba05d76e5060432ad758e2a3fb171fd524412b78cc08cf3e4ff7f0010d271",
           "destination": "docs/wiki-updates/2026-10-06-15.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-16.md",
           "source_sha256": "37c2734f8ff9629344dfc0576dbde22213501b15cab72869222b4b21e140c740",
           "destination": "docs/wiki-updates/2026-10-06-16.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-17.md",
           "source_sha256": "0362be75251f5d313d2e6ee120b44e0714120ed503e7534f3400f035670ed914",
           "destination": "docs/wiki-updates/2026-10-06-17.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-18.md",
           "source_sha256": "c407b5e60a2ac44b813bce4085734e4b4eb518616b9054ef5cb2419400d8b657",
           "destination": "docs/wiki-updates/2026-10-06-18.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-updates/2026-10-06-19.md",
           "source_sha256": "6a2d057afee544f06ced301e0cffc279624fa1ae6aad8b69cc7aab3841e57fb1",
           "destination": "docs/wiki-updates/2026-10-06-19.md",
-          "disposition": "identical_current_file"
+          "disposition": "identical_current_file",
+          "destination_revision": "e63991297df23d5844a0b6357d85b686f1a736a8"
         },
         {
           "source_path": "docs/wiki-work-plan.md",
           "source_sha256": "98f0b0f251fcd4646ff4fa37b1cdcb88706ac13f986d6295dd3bf71218b6140a",
           "destination": "migration/legacy-prs/pr-6/docs/wiki-work-plan.md",
-          "disposition": "preserved_historical_variant"
+          "disposition": "preserved_historical_variant",
+          "destination_revision": "a04b92cd48b676b51b64b3073a9014772f853ddb"
         }
       ],
       "product_disposition": "merge_history_with_forwarding_notice",

@@ -5,3 +5,6 @@ These files preserve unique historical versions of protocols/tools/status.
 They are archival evidence: use the root `scripts/`, `tests/` and `docs/` for
 current work. Do not execute archived tools or restore these documents over
 current protocols. Identical current files are referenced without duplication.
+Each `destination_revision` identifies the exact retained bytes. Current guides
+and tools may subsequently evolve; their historical hashes refer to that commit,
+not necessarily the latest working-tree content.
