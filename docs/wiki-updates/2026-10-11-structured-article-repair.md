@@ -29,3 +29,14 @@ review. Daychi backend/UI and actual three-article preview checks are recorded i
 Daychi's QA. Production structured import and final owner acceptance are pending.
 The historical v1 publication remains imported and its failed format acceptance is
 not rewritten. Full elapsed/token usage/cost were not instrumented.
+
+Runtime follow-up (11 October 21:00 UTC / 12 October Jerusalem): Daychi source
+`151cbdf73560cc94d1019873326d5efab721e1ae` deployed successfully as Railway
+`4605687f-4299-4eda-ac05-307ca29599b2`. Independent implementation review passes
+after closing the owner-inventory credential finding. Daychi 150 tests, shared-web 15
+and Knowledge 114 pass. Production JS/CSS match the isolated stage. Existing owner
+login and a fresh 1145-card inventory confirm all six source pins and zero registry
+disagreements. Current summaries/excerpts remain 476/1428; no structured article
+batch has been imported. Final publication assignment has explicit revisions for
+all eight objects and scopes all six sources/five concepts. Final batch review,
+owner exact-hash acceptance and authenticated production QA are separate steps.

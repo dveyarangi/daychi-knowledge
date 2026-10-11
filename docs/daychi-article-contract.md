@@ -5,8 +5,8 @@ preparation, full-source evidence validation, independent review and the gated
 owner importer. [Workshop #9](https://github.com/dveyarangi/xuanxue-workshop/issues/9)
 coordinates this compatible addition. Content/semantics v1 and old consumers remain.
 Provider implementation: [Daychi PR #9](https://github.com/sleontenko/daychi/pull/9).
-The immutable provider model/schema revision will be recorded after implementation
-review; deployment and publication are tracked in
+Immutable executable [provider revision151cbdf](https://github.com/sleontenko/daychi/tree/151cbdf73560cc94d1019873326d5efab721e1ae)
+contains the model, schema and common conformance packet. Deployment and publication are tracked in
 [the repair record](wiki-updates/2026-10-11-structured-article-repair.md).
 
 `daychi_contracts/articles.py` mirrors `practice_api/wiki_article_models.py` byte for
