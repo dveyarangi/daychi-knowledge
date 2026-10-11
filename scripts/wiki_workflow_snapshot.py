@@ -1,17 +1,18 @@
 """Read the private XLSX without rewriting it and reconcile with live Daychi DTOs.
 
-No owner credentials are used. Public DTOs prove publication presence/revision,
-not private evidence or exact unsanitized payloads. Those require publication QA.
+Existing reader or coordinator owner credentials may be supplied by private file.
+Public DTOs cannot prove source bindings when recording IDs are protected.
 """
 from __future__ import annotations
 
 import argparse
+import http.cookiejar
 from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path
 import time
 from urllib.parse import quote, urlsplit
-from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen, build_opener, HTTPCookieProcessor
 import xml.etree.ElementTree as ET
 import zipfile
 
@@ -64,9 +65,28 @@ def registry_rows(path):
         return parsed
 
 
-def production(origin, token_file=None):
+def production(origin, token_file=None, owner_password_file=None):
     parts = urlsplit(origin)
     require(parts.scheme == 'https' and parts.netloc and not (parts.path or parts.query or parts.fragment or parts.username), 'HTTPS origin required')
+    if owner_password_file:
+        require(not token_file, 'Choose one existing authentication mechanism')
+        opener = build_opener(HTTPCookieProcessor(http.cookiejar.CookieJar()))
+        headers = {'Origin': origin, 'Content-Type': 'application/json'}
+        def owner_call(method, path, body=None):
+            data = None if body is None else json.dumps(body).encode()
+            with opener.open(Request(origin+path, data=data, method=method, headers=headers), timeout=45) as response:
+                return json.load(response)
+        login = owner_call('POST', '/api/admin/login', {'password': Path(owner_password_file).read_text().strip()})
+        headers['X-CSRF-Token'] = login['csrf']
+        try:
+            before = owner_call('GET', '/api/admin/wiki/articles/sources')['materials']
+            after = owner_call('GET', '/api/admin/wiki/articles/sources')['materials']
+            require(digest(before) == digest(after), 'Catalog/source inventory changed during collection')
+            require(before and len({r['id'] for r in before}) == len(before), 'Incomplete owner catalog')
+            return before, {'origin': origin, 'dto_visibility': 'owner_inventory',
+                            'catalogue_sha256': digest(before), 'catalogue_materials': len(before)}
+        finally:
+            owner_call('POST', '/api/admin/logout')
     prefix = '/api/wiki' if token_file else '/api/public/wiki'
     headers = {'Accept': 'application/json'}
     if token_file: headers['Authorization'] = 'Bearer ' + Path(token_file).read_text().strip()
@@ -94,6 +114,8 @@ def make_snapshot(registry, rows, live_rows, metadata, checked_at):
             item = classify(link['url'])
             if item: bindings.setdefault(registry_id(item[1]), set()).add(material['id'])
         if material.get('annotation'): published[material['id']] = material['annotation']
+    require(all(a.get('resource_id') for a in published.values()),
+            'Public recording protection omits source bindings; use an authorized token or coordinator owner inventory')
     imported_sources = {'yt:' + a['resource_id'] for a in published.values()}
     tasks = []
     counts = {'registry_rows': len(rows), 'registry_imported': sum(bool(r[15]) for r in rows),
@@ -178,13 +200,14 @@ def main():
     parser.add_argument('--registry', type=Path, required=True)
     parser.add_argument('--origin', default='https://daychee-api-production.up.railway.app')
     parser.add_argument('--token-file', type=Path, help='Existing reader token; never included in output')
+    parser.add_argument('--owner-password-file', type=Path, help='Coordinator-only existing owner inventory; never included in output')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--intake', type=Path, help='Private coordinator-approved readiness proof for initial summaries')
     args = parser.parse_args()
     before = file_hash(args.registry)
     rows = registry_rows(args.registry)
     started = time.time()
-    live, metadata = production(args.origin.rstrip('/'), args.token_file)
+    live, metadata = production(args.origin.rstrip('/'), args.token_file, args.owner_password_file)
     require(file_hash(args.registry) == before, 'Registry changed during collection; repeat read-only snapshot')
     snapshot = make_snapshot(args.registry, rows, live, metadata, started)
     if args.intake: snapshot = add_intake(snapshot, json.loads(args.intake.read_text()))

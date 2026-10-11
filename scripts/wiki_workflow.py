@@ -17,6 +17,7 @@ import uuid
 
 from daychi_contracts.content import Batch
 from daychi_contracts.semantics import SemanticBatch
+from daychi_contracts.articles import ArticleBatch
 
 MAX_SNAPSHOT_AGE = 86400
 ACTIVE = ('claimed', 'submitted', 'needs_changes', 'review_pass', 'accepted',
@@ -51,11 +52,13 @@ def require(condition, message):
 
 
 def batch_payload(path, kind):
-    model = SemanticBatch if kind == 'semantic' else Batch
+    model = {'semantic': SemanticBatch, 'article': ArticleBatch, 'summary': Batch}[kind]
     return model.model_validate_json(Path(path).read_text()).model_dump()
 
 
 def batch_scope(batch, kind):
+    if kind == 'article':
+        return sorted(['yt:' + s['resource_id'] for s in batch['sources']] + ['concept:' + c['id'] for c in batch['concepts']])
     if kind == 'semantic':
         return sorted(p['concept_id'] for p in batch['pages'])
     return sorted('yt:' + r['resource_id'] for r in batch['records'])
@@ -131,7 +134,7 @@ class Workflow:
         items = snapshot['tasks']
         require(len({t['id'] for t in items}) == len(items), 'Duplicate task IDs')
         for item in items:
-            require(item['kind'] in ('summary', 'prepare', 'review', 'semantic'), 'Unknown work kind')
+            require(item['kind'] in ('summary', 'prepare', 'review', 'semantic', 'article'), 'Unknown work kind')
             require(item['state'] in ('available', 'blocked', 'published_existing'), 'Invalid intake state')
             require(item['id'] == f"{item['kind']}:{item['target']}:r{item['revision']}", 'Task identity differs')
         with self.transaction():
@@ -205,15 +208,21 @@ class Workflow:
             require(actor == assignment['editor'], 'Only assigned editor submits')
             require(assignment['state'] in ('claimed', 'needs_changes'), 'Submission out of sequence')
             self.tasks_intact(identifier)
-            if assignment['kind'] in ('summary', 'semantic'):
+            if assignment['kind'] in ('summary', 'semantic', 'article'):
                 batch = batch_payload(path, assignment['kind'])
                 require(batch['batch_id'] == assignment['batch_id'], 'Batch ID differs')
                 require(batch_scope(batch, assignment['kind']) == json.loads(assignment['scope']), 'Batch is outside assigned scope')
                 for task in self.tasks_intact(identifier):
                     item = json.loads(task['payload'])
-                    records = batch['pages'] if assignment['kind'] == 'semantic' else batch['records']
-                    matched = [r for r in records if (r['concept_id'] if assignment['kind'] == 'semantic' else 'yt:' + r['resource_id']) in item['scope']]
-                    require(matched and all(r['revision'] == item['revision'] for r in matched), 'Revision differs from assignment')
+                    if assignment['kind'] == 'article':
+                        objects = [('yt:' + a['resource_id'], a) for a in batch['articles']] + [('concept:' + c['id'], c) for c in batch['concepts']]
+                        revisions = item.get('object_revisions', {})
+                        require(revisions and set(revisions) == {identity for identity, value in objects}, 'Article assignment requires explicit object revisions')
+                        require(all(value['revision'] == revisions[identity] for identity, value in objects), 'Revision differs from assignment')
+                    else:
+                        records = batch['pages'] if assignment['kind'] == 'semantic' else batch['records']
+                        matched = [r for r in records if (r['concept_id'] if assignment['kind'] == 'semantic' else 'yt:' + r['resource_id']) in item['scope']]
+                        require(matched and all(r['revision'] == item['revision'] for r in matched), 'Revision differs from assignment')
                 value = digest(batch)
             else:
                 value = file_hash(path)
@@ -258,7 +267,7 @@ class Workflow:
             a = self.assignment(identifier)
             self.tasks_intact(identifier)
             require(actor == self.setting('acceptor') and a['state'] == 'accepted', 'Final acceptor must authorize the accepted batch')
-            require(a['kind'] in ('summary', 'semantic') and reference.strip(), 'Publishable batch and explicit authorization reference required')
+            require(a['kind'] in ('summary', 'semantic', 'article') and reference.strip(), 'Publishable batch and explicit authorization reference required')
             self.c.execute('UPDATE assignments SET authorization=? WHERE id=?', (reference, identifier))
             self.event(actor, 'authorize_publication', identifier, {'reference': reference, 'result_sha256': a['result_hash']})
 

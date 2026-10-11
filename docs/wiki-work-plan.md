@@ -3,6 +3,24 @@
 Назначения и статусы ведутся в [приватном реестре](wiki-team-pipeline.md).
 [Процесс](wiki-production-pipeline.md) · [Протокол](wiki-contributor-pipeline.md).
 
+## Структурированные статьи: исправление опубликовано · 2026-10-12
+
+Владелец принял точный hash партии и отдельно разрешил импорт. Те же три статьи
+теперь опубликованы с разделами, смысловыми абзацами, 10 ссылками из текста на
+пять полных страниц понятий и двумя подтверждёнными переходами между статьями.
+Независимые review текста/источников и итоговой упаковки — pass; receipt, replay,
+все восемь production DTO, Chrome и возвраты проверены. Две задачи — verified.
+Все временные QA-приглашения отозваны.
+
+Реестр остаётся 1350 строк; исходные 476 конспектов и 1428 цитат неизменны.
+Объединены шесть датированных примечаний с сохранением прежней истории, формул,
+периодов и назначений. Прежние 45 независимых проверок не закрываются этим pilot.
+Алгоритм и расширение контракта: [документ](daychi-article-contract.md);
+[факты и ограничения](wiki-updates/2026-10-11-structured-article-repair.md).
+Полное время, token usage и стоимость не измерены. Новая партия не назначена;
+следующий объём выбирается из свежей coordinator queue по прежнему протоколу.
+Просмотр результата владельцем возможен в рабочей вики без нового импорта.
+
 ## Сверка и новый порядок работы · 2026-10-09
 
 Все оставшиеся Daychi PR #4–7 слиты с сохранением редакционной истории здесь.
@@ -618,3 +636,23 @@ was performed during this diagnosis. Do not scale to six more sources yet: resto
 and verify the intended reader result for the same three first. Historical timing
 and review records remain intact; this diagnosis's elapsed/usage/cost were not
 instrumented.
+
+## Structured repair preparation · 2026-10-11
+
+Same three articles:29 preserved paragraphs/13 sections/10 reviewed inline mentions;
+five merged concept pages/11 claims/13 retained+new links/70 exact evidence windows;
+one supported related pair (two directions). Six sources reserved from a fresh
+coordinator snapshot. Independently reviewed complete reading/evidence is bound to
+the unchanged editorial document; additional source reading covers retained glossary
+work. No extra articles, ASR, listening or teacher approval.
+
+The compatible provider layer and Knowledge models/schema/validator/importer/gates
+are implemented in separate branches. Knowledge114tests pass; provider/consumer
+models, schema and common synthetic fixture are identical. Actual reader preview
+preserves every paragraph/heading/span and supported destination. Production import,
+exact-batch owner acceptance and authenticated production QA remain pending.
+Elapsed/usage/cost were not instrumented; no estimate is presented as measurement.
+Next: final batch review/owner acceptance, authorized import of these same3+5,
+receipt/replay/private+anonymous+UI checks and a preserving registry merge. Scaling
+remains deferred until this reader result is accepted.
+[Repair record](wiki-updates/2026-10-11-structured-article-repair.md).
