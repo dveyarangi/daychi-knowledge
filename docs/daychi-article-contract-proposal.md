@@ -1,7 +1,9 @@
 # Daychi full-source articles · compatible extension proposal
 
-Status: proposal from the 2026-10-09 private knowledge pilot. No server/reader
-implementation, schema refresh or feature activation occurred. The three article
+Historical proposal from the 2026-10-09 private knowledge pilot. The compatible
+implementation prepared on 2026-10-11 is documented in
+[the article contract](daychi-article-contract.md); release/import status is recorded
+[separately](wiki-updates/2026-10-11-structured-article-repair.md). The three article
 texts were subsequently published through the active v1 summary contract after
 owner authorization, without truncation; this does not implement the extension.
 Owner feedback rejected that prose-only reader result. The proposed extension

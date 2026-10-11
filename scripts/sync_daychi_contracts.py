@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--daychi', type=Path, required=True)
     parser.add_argument('--require-semantics', action='store_true')
+    parser.add_argument('--require-articles', action='store_true')
     args = parser.parse_args()
     manifest = json.loads((ROOT/'contracts/source.json').read_text())
     for kind, source in manifest.items():
@@ -31,6 +32,17 @@ def main():
         if definitions(server, source['names']) != definitions(local, source['names']):
             raise SystemExit(f'FAIL: {kind}-v1 differs from Daychi; coordinate contract changes before updating')
         print(f'PASS: {kind}-v1 executable definitions match Daychi')
+    provider = args.daychi/'practice_api/wiki_article_models.py'
+    if not provider.exists() and not args.require_articles:
+        print('SKIP: article extension absent from this Daychi checkout')
+    else:
+        if provider.read_bytes() != (ROOT/'daychi_contracts/articles.py').read_bytes():
+            raise SystemExit('FAIL: articles-v1 differs from Daychi; coordinate before refreshing')
+        if (args.daychi/'docs/contracts/wiki-articles-v1.schema.json').read_bytes() != (ROOT/'contracts/articles-v1.schema.json').read_bytes():
+            raise SystemExit('FAIL: articles-v1 schema differs from Daychi')
+        if (args.daychi/'tests/fixtures/article-batch-v1.json').read_bytes() != (ROOT/'tests/fixtures/article-batch-v1.json').read_bytes():
+            raise SystemExit('FAIL: articles-v1 common conformance fixture differs from Daychi')
+        print('PASS: articles-v1 models, schema and common fixture match Daychi')
 
 
 if __name__ == '__main__':

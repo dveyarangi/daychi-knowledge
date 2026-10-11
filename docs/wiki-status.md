@@ -107,3 +107,12 @@
 его сводка для GitHub. Транскрипты TXT/SRT, корпус, аудио, Excel, базы,
 receipts, приглашения и credentials остаются вне Git. Журнал обновляется
 координатором после каждой партии; автоматической синхронизации пока нет.
+
+## Structured article repair · 2026-10-11 · prepared
+
+The same three article bodies and five complete concept pages have passed independent
+source/content review. Compatible API/reader and Knowledge import tooling are prepared;
+114Knowledge tests pass. Production still has the prose-only v1 projections. Final
+batch acceptance/import/authenticated production QA remain pending. Historical
+476summaries/1428quotes are unchanged; article objects are a separate layer.
+[Current repair evidence](wiki-updates/2026-10-11-structured-article-repair.md).

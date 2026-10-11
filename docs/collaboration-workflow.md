@@ -88,7 +88,8 @@ CLI `--actor` — метка аудита, не авторизация. SQLite �
 
 Отдельные виды работ: `prepare` — доступ/скачивание/текст/ASR/привязка;
 `summary` — конспект; `review` — независимая проверка уже опубликованного;
-`semantic` — страницы тем/словаря. При отсутствии проверенного текста адаптер
+`semantic` — страницы тем/словаря; `article` — совместимый структурированный пакет
+статей и полных страниц понятий по [контракту статей](daychi-article-contract.md). При отсутствии проверенного текста адаптер
 создаёт prepare, даже если название кажется пригодным для статьи.
 
 Нет автоматического освобождения по таймауту: агент мог продолжать работать.
@@ -141,7 +142,7 @@ python -m scripts.wiki_workflow --db "$WIKI_WORKFLOW_DB" accept \
 Review JSON содержит `assignment_id`, `result_sha256`, `decision`, `scope`,
 `full_source_read` и `evidence` с путями/hashes доказательств. Decision:
 pass / needs_changes / blocked. Полное покрытие требуется для pass.
-`summary`/`semantic` result — финальный валидированный batch.json;
+`summary`/`semantic`/`article` result — финальный валидированный batch.json;
 prepare/review result — приватный отчёт, hash которого фиксируется целиком.
 
 ## Публикация и восстановление
@@ -154,7 +155,10 @@ python -m scripts.wiki_enrichment_import --batch "$WIKI_RESULT" \
   --workflow-db "$WIKI_WORKFLOW_DB" --assignment "$WIKI_ASSIGNMENT" --receipt "$WIKI_RECEIPT"
 ```
 
-Для semantic применяется `scripts.wiki_semantic_import` с теми же gate-аргументами.
+Для semantic применяется `scripts.wiki_semantic_import`, для article —
+`scripts.wiki_article_import` с теми же gate-аргументами. Article assignment
+резервирует все источники/понятия пакета и явно задаёт `object_revisions` для
+каждой статьи и страницы; общая revision задания их не заменяет.
 Без `--apply` прежняя локальная валидация работает без журнала и credentials.
 С `--apply` необходимы accepted hash, отдельное разрешение и тот же origin, что
 в свежем snapshot. Receipt записывается сразу после первой записи до replay.
@@ -188,3 +192,11 @@ acceptance, permission, receipt и QA вне Git. Обновлять [план](
 задач/источников. Следующий участник получает новую очередь и резервирование,
 а не выбирает работу из старой записи в README. PR с кодом проходит CI и
 repository guard; финальное решение по содержимому принимает ответственный.
+
+### Source binding after public recording protection
+
+Since 11 October, anonymous DTOs omit YouTube IDs. A redacted catalog cannot issue
+source-bound work. Use an existing authorized reader `--token-file`, or coordinator
+`wiki_workflow_snapshot --owner-password-file` against the compatible owner-only
+article source inventory. Public metadata remains useful for presence/UI checks;
+never reconstruct source bindings from titles or old progress.

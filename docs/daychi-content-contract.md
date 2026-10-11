@@ -50,3 +50,12 @@ active-contract update from the proposed extension.
 The owner subsequently rejected the article format; see the
 [diagnosis and acceptance requirements](wiki-updates/2026-10-09-article-format-review.md).
 Legacy summary export is not a structured article publication path.
+
+
+## Coexisting structured articles · 2026-10-11
+
+The [article contract](daychi-article-contract.md) adds its own strict owner batch,
+source-pinned claims/evidence, inline mention ranges and reviewed direct article
+paths. It preserves content/semantics v1. `daychi_contracts/articles.py` and
+`contracts/articles-v1.schema.json` mirror the provider executable definitions;
+`tests/fixtures/article-batch-v1.json` is the shared synthetic case.
