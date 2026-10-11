@@ -40,3 +40,35 @@ disagreements. Current summaries/excerpts remain 476/1428; no structured article
 batch has been imported. Final publication assignment has explicit revisions for
 all eight objects and scopes all six sources/five concepts. Final batch review,
 owner exact-hash acceptance and authenticated production QA are separate steps.
+
+## Publication completion · 12 October 2026 Jerusalem
+
+The owner accepted and separately authorized the exact modeled hash
+`f57c0c3820d1c0bc1b28e16f1bf6234a932bdfdfed7d833ab5fe102bc5144384`
+and temporary QA access. Independent final packaging review passed before import.
+The ordinary importer published three articles, five complete concept pages and
+13 links as one atomic batch; receipt and idempotent replay are saved privately.
+All eight objects have article-layer revision 1. Existing source-summary revisions
+and material IDs are unchanged. Both preparation and publication assignments now
+have authority-ledger state `verified`.
+
+All eight authorized/public production DTOs match the accepted packet except their
+server update times. The coordinator observed complete owner-inventory equality
+before/after; the separate final audit identifies this specific equality as
+coordinator-reported because no after-inventory copy is retained. Production Chrome
+1920×817 confirms 29 paragraphs, 13 headings, 10 inline mentions, two related paths,
+five pages, 11 concept claims, 13 backlinks and all eight recent entries. Actual
+concept/related/graph return controls pass. Responsive and error-state checks are
+from the local candidate with matching compiled production assets, not a production
+mobile or physical-device proof. All four temporary QA invitations are revoked.
+
+The private registry keeps 1350 rows and the previous 476 summaries/1428 excerpts.
+Only six dated notes and three row heights change; all earlier values/history,
+formulas, assignments, periods and other XLSX parts are preserved. Render inspected;
+native Excel recalculation, listening, measured ASR accuracy and teacher approval
+are not claimed. Full task elapsed time, token usage and cost were not instrumented.
+No further editorial batch is assigned by this repair.
+Final independent read-only evidence audit passes with no remaining findings:
+eight live anonymous DTOs, saved private DTO/DOM/receipt hashes and exact registry
+ZIP/XML preservation checked separately. Owner-inventory equality and QA invitation
+revocations remain identified as coordinator-observed facts.

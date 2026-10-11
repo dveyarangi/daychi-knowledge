@@ -39,7 +39,7 @@ content import endpoints. Daychi owns content delivery, public/private access,
 its clients and Cabinet integration. The retained content API remains in Daychi.
 No Cabinet migration, deployment or publication is authorized by this split.
 
-Coexisting article extension prepared 2026-10-11: follow
+Coexisting article extension deployed and pilot verified 2026-10-12: follow
 [the article contract](docs/daychi-article-contract.md). Knowledge owns editorial
 validation/importer/coordinator gates; Daychi owns models, storage and reader.
 [Workshop #9](https://github.com/dveyarangi/xuanxue-workshop/issues/9) coordinates
