@@ -679,3 +679,25 @@ Next: final batch review/owner acceptance, authorized import of these same3+5,
 receipt/replay/private+anonymous+UI checks and a preserving registry merge. Scaling
 remains deferred until this reader result is accepted.
 [Repair record](wiki-updates/2026-10-11-structured-article-repair.md).
+
+## Next-ten publication verified · 2026-10-12
+
+The owner accepted the exact planning result and article batch, authorized import,
+and authorized temporary QA access followed by revocation. Fresh production and
+registry pins matched before import. Ten articles and eight concept pages are now
+published; production has 13 structured articles and 13 concept pages. Durable
+receipt and idempotent replay passed. All 26 authorized reader DTOs, including the
+previous eight pages, matched; source fields and anonymous protection stayed intact.
+
+Chrome verified all 18 new pages, 90 paragraphs, 44 sections, 19 contextual links,
+21 related hrefs and concept backlinks. All new pages appear in Recent; concept
+and related-article navigation with return passed. Both temporary QA invitations
+were revoked and the API session was rejected afterward. Ten stable-ID matched
+registry notes and their row heights were updated; other package parts, manual
+fields, periods, formulas, styles and validations were preserved. Final snapshot
+has zero catalog disagreements; planning and article assignments are `verified`.
+
+Publication elapsed time, tokens and cost were not instrumented. The earlier
+22.35-minute measurement remains preparation plus local reader QA only. Next:
+reserve another ten eligible ready-text sources from a fresh queue if requested.
+No further batch, deployment or Workshop report was performed.
