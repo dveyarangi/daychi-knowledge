@@ -33,14 +33,17 @@ docs/wiki-contributor-pipeline.md, docs/wiki-team-pipeline.md и docs/wiki-work-
 
 Use [.agents/skills/collaborate/SKILL.md](.agents/skills/collaborate/SKILL.md)
 at session startup, before boundary changes, and when coordinating with Workshop.
-This is Daychi's knowledge track; retain `project:daychi`, not a new recipient label.
-Existing: knowledge pipeline prepares v1 JSON batches for Daychi's existing owner
-content import endpoints. Daychi owns content delivery, public/private access,
-its clients and Cabinet integration. The retained content API remains in Daychi.
-No Cabinet migration, deployment or publication is authorized by this split.
-
-Coexisting article extension deployed and pilot verified 2026-10-12: follow
-[the article contract](docs/daychi-article-contract.md). Knowledge owns editorial
-validation/importer/coordinator gates; Daychi owns models, storage and reader.
-[Workshop #9](https://github.com/dveyarangi/xuanxue-workshop/issues/9) coordinates
-the coexisting version. No retirement of content/semantics v1.
+Daychi Knowledge is a separate Workshop participant addressed as `project:knowledge`.
+Existing inspected boundary: Knowledge prepares and imports source-bound content
+packages into Daychi's provider-owned content, semantic-content and article operations.
+Knowledge owns source preparation, editorial review and its gated import tools;
+Daychi owns the API, persisted content, access control and readers.
+Local context: `scripts/wiki_enrichment_import.py`, `scripts/wiki_semantic_import.py`,
+`scripts/wiki_article_import.py`, `daychi_contracts/` and `contracts/`;
+provider definitions are referenced by `docs/daychi-content-contract.md` and
+`docs/daychi-article-contract.md`.
+Content/semantics v1 remain active. Structured-article acceptance remains in
+[Workshop issue 9](https://github.com/dveyarangi/xuanxue-workshop/issues/9).
+See [accepted roles](https://github.com/dveyarangi/xuanxue-workshop/blob/8d4def164131c3f8fe737548b888643551b3a004/docs/boundaries.md#accepted-knowledge-responsibility-boundary)
+and [scoped evidence](https://github.com/dveyarangi/xuanxue-workshop/blob/8d4def164131c3f8fe737548b888643551b3a004/docs/current-system.md#knowledge-reception-evidence--inspected-2026-10-12).
+Cabinet/native application work remains separately addressed to its responsible projects.
