@@ -33,17 +33,12 @@ docs/wiki-contributor-pipeline.md, docs/wiki-team-pipeline.md и docs/wiki-work-
 
 Use [.agents/skills/collaborate/SKILL.md](.agents/skills/collaborate/SKILL.md)
 at session startup, before boundary changes, and when coordinating with Workshop.
-Daychi Knowledge is a separate Workshop participant addressed as `project:knowledge`.
-Existing inspected boundary: Knowledge prepares and imports source-bound content
-packages into Daychi's provider-owned content, semantic-content and article operations.
-Knowledge owns source preparation, editorial review and its gated import tools;
-Daychi owns the API, persisted content, access control and readers.
-Local context: `scripts/wiki_enrichment_import.py`, `scripts/wiki_semantic_import.py`,
-`scripts/wiki_article_import.py`, `daychi_contracts/` and `contracts/`;
-provider definitions are referenced by `docs/daychi-content-contract.md` and
-`docs/daychi-article-contract.md`.
-Content/semantics v1 remain active. Structured-article acceptance remains in
-[Workshop issue 9](https://github.com/dveyarangi/xuanxue-workshop/issues/9).
-See [accepted roles](https://github.com/dveyarangi/xuanxue-workshop/blob/8d4def164131c3f8fe737548b888643551b3a004/docs/boundaries.md#accepted-knowledge-responsibility-boundary)
-and [scoped evidence](https://github.com/dveyarangi/xuanxue-workshop/blob/8d4def164131c3f8fe737548b888643551b3a004/docs/current-system.md#knowledge-reception-evidence--inspected-2026-10-12).
-Cabinet/native application work remains separately addressed to its responsible projects.
+
+Knowledge prepares content packages for Daychi’s import APIs. Knowledge owns source
+preparation, editorial review and import tooling; Daychi owns import definitions,
+storage, access control and readers.
+
+See the [content contract](https://github.com/sleontenko/daychi-knowledge/blob/e4006807c3adaa373ad3a6f63396d0a2eaea66ef/docs/daychi-content-contract.md)
+and [article contract](https://github.com/sleontenko/daychi-knowledge/blob/e4006807c3adaa373ad3a6f63396d0a2eaea66ef/docs/daychi-article-contract.md)
+for the shared definitions. Local import tools are under `scripts/`; contract
+mirrors are in `daychi_contracts/`.
